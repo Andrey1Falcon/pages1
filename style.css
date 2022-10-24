@@ -1,6 +1,9 @@
 :root {
     --main-color: #000000;
     --hover-color:  #78adde;
+    --background-mask: rgba(228, 228, 228, 0.3);
+    --background-box: rgba(239, 239, 239, 0.85);
+    --border-box: 2px solid rgba(166, 166, 166, 0.85);
   }
 
 body{ 
@@ -9,13 +12,16 @@ body{
     font-size: 14px;
     color: var(--main-color);
 }
+* {
+box-sizing: border-box;
+}
 /* == Backgraound ================================================*/
 .mask{
     left: 0;
     top:0;
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.315);
+    background-color: var(--background-mask);
     z-index: -4;
     position: fixed;
 }  
@@ -30,11 +36,23 @@ body{
 }
 .container{
     width : 100%;
-    max-width: 1260px;
-    min-width: 1260px ;
+    max-width: 1204px;
+    min-width: 1204px ;
     margin: 0 auto;
-    /*background-color: rgba(229, 229, 229, 0.883);*/
-    padding: 30px;
+}
+.warning{
+    font-size: 20px;
+    color: red;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 20px;
+}
+.intro{
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
 }
 /* == Header ================================================*/
 .header{
@@ -42,11 +60,12 @@ body{
     left: 0;
     top: 0;
     width: 100%;
+    background-color: var(--background-box);
+    border-bottom: var(--border-box);
 }
 .header__in{
     display: flex;
     justify-content:space-between;
-    border-bottom: 1px solid var(--main-color);
     align-items: center;
 }
 .header__nav{
@@ -66,7 +85,6 @@ body{
     text-transform: uppercase;
     opacity: 0.85;
     margin: 10px;
-    padding: 10px;
     transition: opacity 0.15s linear;
     transition: color 0.15s linear;
 }
@@ -76,14 +94,14 @@ body{
 }
 /* == Intro ================================================*/
 h1{
-    font-size: 60px;
+    font-size: 40px;
     color: var(--main-color);
     font-family: 'Open Sans', sans-serif;
     text-transform: uppercase;
     margin-left: 100px;
 }
 h2{
-    font-size: 40px;
+    font-size: 30px;
     color: var(--main-color);
     font-family: 'Open Sans', sans-serif;
     text-transform: uppercase;
@@ -95,6 +113,9 @@ h2{
     box-sizing: border-box;
     display:flex;
     flex-wrap: wrap;
+    background-color: var(--background-box);
+    border: var(--border-box);
+    
 }
 .small__project__box{
     position: relative;
@@ -129,8 +150,8 @@ h2{
 .img{
     position: absolute;
     object-fit: cover;
-    width: 260px;
-    height: 230px;
+    width: 100%;
+    height: 100%;
 }
 .box__name{
     width: 100%;
@@ -147,28 +168,29 @@ h2{
 /* == Creater ================================================*/
 .creator{
     position:  relative;
-    height: 260px;
-    margin: 20px;
-    display: flex;
-    justify-content:space-between;
+    box-sizing: border-box;
+    display:flex;
+    flex-wrap: wrap;
+    background-color: var(--background-box);
+    border: var(--border-box);
     
 }
 .photo{
     position: relative;
     width: 260px;
     height: 260px;
-
+    margin: 20px;
 }
 .img__creator{
     position: relative;
     object-fit: cover;
-    width: 260px;
-    height: 260px;
+    width: 100%;
+    height: 100%;
 }
 .cretor__info{
     position:  relative;
-    width: 100%;
-    margin: 30px;
+    width: 860px;
+    margin: 20px;
 
 }
 .cretor__info__text{
@@ -176,13 +198,28 @@ h2{
     font-size: 44px;
     font-family: Raleway, sans-serif;
 }
+.creator__icongroup{
+    position: relative;
+    display:flex;
+    flex-wrap: wrap;
+    height: 68px;
+    margin: 4px;
+    
+
+}
+.creator__icon{
+    position: relative;
+    width: 64px;
+    height: 64px;
+    margin-right: 20px;
+
+}
 /* == Footer ================================================*/
 .footer{
-    border-top: 1px solid var(--main-color);
-
+    border-top: var(--border-box);
+    background-color: var(--background-box);
 
 }
 .footer__text{
-    font-size: 24px;
-    color: red ;
+
 }
