@@ -1,5 +1,5 @@
 :root {
-    --main-color: #ffffff;
+    --main-color: #000000;
     --hover-color:  #78adde;
   }
   *{
@@ -12,7 +12,7 @@ body{
     color: var(--main-color);
 }
 /* == Backgraound ================================================*/
-.mask{
+/*.mask{
     left: 0;
     top:0;
     width: 100%;
@@ -30,6 +30,7 @@ body{
     object-fit: cover;
     position: fixed;
     z-index: -5;
+*/
 }
 .container{
     width : 100%;
