@@ -12,7 +12,8 @@ body{
     color: var(--main-color);
 }
 /* == Backgraound ================================================*/
-/*.mask{
+/* 
+.mask{
     left: 0;
     top:0;
     width: 100%;
@@ -21,7 +22,8 @@ body{
     z-index: -4;
     position: fixed;
     
-}   
+}  
+
 .vid{
     left: 0;
     top: 0;
@@ -30,8 +32,8 @@ body{
     object-fit: cover;
     position: fixed;
     z-index: -5;
-*/
 }
+*/
 .container{
     width : 100%;
     max-width: 1200px;
