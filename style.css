@@ -4,6 +4,7 @@
     --background-box: rgba(255, 255, 255, 0.866);
     --border-box: 2px solid rgba(166, 166, 166, 0.85);
     --border-color: rgba(166, 166, 166, 0.85);
+    --border-radius: 10px;
   }
 
 body{ 
@@ -60,11 +61,13 @@ box-sizing: border-box;
     position: relative;
     left: 0;
     top: 0;
-    height: 77px;
+    height: 79px;
     width: 100%;
     background-color: var(--background-box);
-    border-bottom: var(--border-box);
+    border: var(--border-box);
     padding: 20px 40px 20px 40px;
+    border-radius: var(--border-radius);
+    overflow: hidden;
 }
 .logo{
     position: relative;
@@ -125,6 +128,8 @@ h2{
     background-color: var(--background-box);
     border: var(--border-box);
     padding: 20px;
+    border-radius: var(--border-radius);
+    overflow: hidden;
     
 }
 .small__project__box{
@@ -133,6 +138,8 @@ h2{
     width: 260px;
     height: 260px;
     margin: 20px;
+    border-radius: var(--border-radius);
+    overflow: hidden;
 }
 .small__project__box:hover .box__hover{
     opacity: 1;
@@ -184,6 +191,8 @@ h2{
     background-color: var(--background-box);
     border: var(--border-box);
     padding: 20px;
+    border-radius: var(--border-radius);
+    overflow: hidden;
     
 }
 .photo{
@@ -191,6 +200,9 @@ h2{
     width: 260px;
     height: 260px;
     margin: 20px;
+    border-radius: 130px;
+    overflow: hidden;
+
 }
 .img__creator{
     position: relative;
@@ -245,8 +257,7 @@ h2{
 }
 /* == Footer ================================================*/
 .footer{
-    border-top: var(--border-box);
-    background-color: var(--background-box);
+   
 
 }
 .footer__text{
