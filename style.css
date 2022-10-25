@@ -1,9 +1,9 @@
 :root {
     --main-color: #000000;
-    --hover-color:  #78adde;
-    --background-mask: rgba(228, 228, 228, 0.3);
-    --background-box: rgba(239, 239, 239, 0.85);
+    --background-mask: rgba(255, 255, 255, 0.381);
+    --background-box: rgba(255, 255, 255, 0.866);
     --border-box: 2px solid rgba(166, 166, 166, 0.85);
+    --border-color: rgba(166, 166, 166, 0.85);
   }
 
 body{ 
@@ -36,8 +36,8 @@ box-sizing: border-box;
 }
 .container{
     width : 100%;
-    max-width: 1204px;
-    min-width: 1204px ;
+    max-width: 1244px;
+    min-width: 1244px ;
     margin: 0 auto;
 }
 .warning{
@@ -56,41 +56,49 @@ box-sizing: border-box;
 }
 /* == Header ================================================*/
 .header{
+    box-sizing: border-box;
     position: relative;
     left: 0;
     top: 0;
+    height: 77px;
     width: 100%;
     background-color: var(--background-box);
     border-bottom: var(--border-box);
+    padding: 20px 40px 20px 40px;
+}
+.logo{
+    position: relative;
+    display: flex;
+    align-items: center;
 }
 .header__in{
     display: flex;
     justify-content:space-between;
     align-items: center;
+   
 }
 .header__nav{
-    transition:  color .15s linear;
-    transition: font-size .15s linear;
-    margin: 0;
-
+    display: flex;
+    justify-content:space-between;
+    height: 35px;
+    width: 500px;
     
 }
 .header__nav__link{
-    width: 150px;
-    height: 50px;
+    display: flex;
+    height: 52px;
     font-family: 'Open Sans', sans-serif;
     font-size: 20px;
     color: var(--main-color);
     text-decoration: none;
     text-transform: uppercase;
-    opacity: 0.85;
-    margin: 10px;
-    transition: opacity 0.15s linear;
-    transition: color 0.15s linear;
+    margin: 5px 10px 0px 10px;
+    transition: border-bottom  0.25s linear;
 }
 .header__nav__link:hover {
-    color: var(--hover-color);
-    opacity: 1;
+    
+    border-bottom: 5px solid var(--border-color);
+    
 }
 /* == Intro ================================================*/
 h1{
@@ -98,7 +106,8 @@ h1{
     color: var(--main-color);
     font-family: 'Open Sans', sans-serif;
     text-transform: uppercase;
-    margin-left: 100px;
+    margin-left: 20px;
+    line-height: 20px;
 }
 h2{
     font-size: 30px;
@@ -115,6 +124,7 @@ h2{
     flex-wrap: wrap;
     background-color: var(--background-box);
     border: var(--border-box);
+    padding: 20px;
     
 }
 .small__project__box{
@@ -173,6 +183,7 @@ h2{
     flex-wrap: wrap;
     background-color: var(--background-box);
     border: var(--border-box);
+    padding: 20px;
     
 }
 .photo{
@@ -202,17 +213,35 @@ h2{
     position: relative;
     display:flex;
     flex-wrap: wrap;
-    height: 68px;
+    height: 78px;
     margin: 4px;
+    padding: 4px;
+
     
 
 }
-.creator__icon{
+.creator__box__icon{
+    box-sizing: content-box;
     position: relative;
     width: 64px;
     height: 64px;
-    margin-right: 20px;
+    margin-right: 40px;
+    padding-bottom: 4px;  
+    transition: border-bottom  0.25s linear;
+   opacity: 0.8;
+    
+}
 
+.creator__icon{
+   
+    position: relative;
+    width: 64px;
+    height: 64px;
+}
+
+.creator__box__icon:hover {
+    border-bottom: 5px solid var(--border-color);
+    
 }
 /* == Footer ================================================*/
 .footer{
