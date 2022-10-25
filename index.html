@@ -10,13 +10,11 @@
 </head>
 <body >
 
-<div class="mask">
+<div class="background__vid">
+    <video class="vid" autoplay loop muted plays-inline>
+        <source src="backgroundvideo.mp4" type="video/mp4" >
+    </video>
 </div>
-
-<video autoplay loop muted plays-inline webkit-playinginline class="vid">
-    <source src="backgroundvideo.mp4" type="video/mp4">
-</video>
-
 <div class="container">
 <!-- #Header --> 
     <header class="header">
@@ -31,12 +29,9 @@
                 <a class="header__nav__link" href="#">Регистрация</a>
             </nav>
         </div>
-    </header>
-    <div class="warning">
-        warning: сайт на начальном этапе разработки
-
-    </div>
-   <!-- #Mine -->
+    </header> <!-- #Header --> 
+    <p class="warning">warning: сайт на начальном этапе разработки</p> 
+<!-- #Mine -->
     <mine>
         <!-- #Progect__nav -->
         <div class="project__nav">
@@ -69,7 +64,6 @@
                 <div class="box__image">
                     <img class="img"  src="im/project/IMG_4365.JPG" alt="" >
                 </div>
-
                 <div class="box__info">
                     <div class="box__name">
                         desktop 
@@ -160,13 +154,8 @@
                     </div> 
                 </div>
             </div>
-        </div>
-        <div class="project__mobile_workstation">
-        </div>
-        <div class="warning">
-            warning: сайт на начальном этапе разработки
-    
-        </div>
+        </div>  <!-- #Progect__nav -->
+        <p class="warning">warning: сайт на начальном этапе разработки</p> 
         <!-- #Creator -->  
         <div class="creator">
             <div class="intro">
@@ -218,20 +207,15 @@
                 </div>
                 </div>
             </div>
-        </div>
-    </mine>
+        </div> <!-- #Creator -->  
+    </mine> <!-- #Mine -->
     <!-- #footer -->
     <footer class="footer" >
         <div class="footer__text">
                         
         </div>
         <div>
-        </footer>
-            <p></p>
-            <p></p>
-            <p></p>
-
-        </div>
+    </footer> <!-- #footer -->
 </div>
 </body>
 </html>
