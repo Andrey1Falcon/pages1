@@ -1,3 +1,4 @@
+/* == Default ================================================*/
 :root {
     --main-color: #1e1e1e;
     --background-mask: rgb(240, 240, 240);
@@ -5,6 +6,7 @@
     --border-box: 0px solid rgba(166, 166, 166, 0.85);
     --border-color: rgb(255, 255, 255);
     --border-radius: 10px ;
+    --animation-second: 0.5s;
 }
 body{ 
     font-family: Raleway, sans-serif;
@@ -18,7 +20,6 @@ body{
 :hover{
 box-sizing: border-box;
 }
-/* == Backgraound ================================================*/
 .mask{
     left: 0;
     top:0;
@@ -59,7 +60,7 @@ box-sizing: border-box;
     width: 100%;
 }
 h1{
-    font-size: 40px;
+    font-size: 20px;
     color: var(--main-color);
     font-family: 'Open Sans', sans-serif;
     text-transform: uppercase;
@@ -67,35 +68,35 @@ h1{
     line-height: 20px;
 }
 h2{
-    font-size: 30px;
+    font-size: 20px;
     color: var(--main-color);
     font-family: 'Open Sans', sans-serif;
     text-transform: uppercase;
     margin-left: 100px;
- 
 }
 /* == Header ================================================*/
 .header{
-    position: relative;
+ 
+}
+.header__in{
+    position:relative;
     left: 0px;
     top: 0px;
-    height: 80px;
+    height: 49px;
     width: 100%;
     background-color: var(--background-box);
     border: var(--border-box);
-    padding: 20px 40px 20px 40px;
+    padding: 5px 40px 5px 40px;
     border-radius: var(--border-radius);
+    position: relative;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
 }
 .logo{
     position: relative;
     display: flex;
     align-items: center;
-}
-.header__in{
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-   
 }
 .header__nav{
     display: flex;
@@ -113,12 +114,11 @@ h2{
     text-decoration: none;
     text-transform: uppercase;
     padding: 0px 10px 0px 10px;
-    transition: background-color 0.25s;
+    transition: background-color var(--animation-second);
+    border-radius: 10px;
 }
 .header__nav__link:hover {
-    background-color: var(--background-mask);
-    border-radius: 10px;
-    
+    background-color: var(--background-mask);   
 }
 /* == Progect ================================================*/
 .project__nav{
@@ -139,25 +139,25 @@ h2{
     border-radius: var(--border-radius);
     overflow: hidden;
 }
-.small__project__box:hover .box__image{
-    margin-top: -230px;
-}
 .box__image{
     position: relative;
     width: 260px;
     height: 230px;
-    transition: margin 1s;
+    transition: margin var(--animation-second) linear;
 }
 .img{
     position: absolute;
     object-fit: cover;
     width: 100%;
     height: 100%;
+    transition: opacity 0.3s linear;
+    
+    
 }
 .box__info{
     width: 100%;
     height: 290px;
-    background-color: rgba(0, 0, 0, 0.111);
+    background-color: var(--background-mask);
 }
 .box__name{
     position: relative;
@@ -173,8 +173,16 @@ h2{
 }
 .box__description{
     margin: 10px;
-
 }
+.small__project__box:hover .box__image{
+    
+    margin-top: -230px;
+}
+.small__project__box:hover .img{
+    
+opacity: 0;
+}
+
 /* == Creater ================================================*/
 .creator{
     position:  relative;
@@ -232,7 +240,7 @@ h2{
     width: 84px;
     height: 84px;  
     border-radius: 42px;
-    transition: background-color 0.25s;
+    transition: background-color var(--animation-second);
 }
 
 .creator__icon{
