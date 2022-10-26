@@ -301,14 +301,13 @@ opacity: 0;
     }
     .background__vid__mob{
         position: fixed;
-        top: 0;
+        top: 30px;
         left: 0;
         width: 100%;
         z-index: -2;
     
     }
     .vid{
-        margin-top: -50px;
         position: absolute;
         width: 100%;
         object-fit: cover;
@@ -333,7 +332,6 @@ opacity: 0;
         flex-direction: column;
         width: 100%;
         height: 400px;
-        margin-bottom: -30px;
     }
     .intro__1{
         margin-top: 200px;
