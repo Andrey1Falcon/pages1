@@ -1,12 +1,18 @@
 /* == Default ================================================*/
 :root {
+    /*---RGB*---*/
     --main-color: #1e1e1e;
     --background-mask: rgb(240, 240, 240);
     --background-box: rgb(255, 255, 255);
     --border-box: 0px solid rgba(166, 166, 166, 0.85);
     --border-color: rgb(255, 255, 255);
-    --border-radius: 10px ;
+    /*---Picsel---*/
+    --border-radius: 10px;
     --animation-second: 0.5s;
+    --small__project__box__size: 260px;
+    --small__project__box__size__img__heigth: 230px;
+    --margin__default: 20px;
+
 }
 body{ 
     font-family: Raleway, sans-serif;
@@ -36,11 +42,10 @@ body{
     object-fit: cover;
 }
 .container{
-    position: relative;
-    width : 100%;
-    max-width: 1244px;
-    min-width: 1244px ;
-    margin: 0 auto;
+        position: relative;
+        width : 1240px;
+        margin: 0 auto;
+    
 }
 .warning{
     font-size: 20px;
@@ -64,7 +69,6 @@ h1{
     text-transform: uppercase;
     margin-left: 20px;
     line-height: 20px;
-    margin-left: 320px;
 }
 h2{
     font-size: 20px;
@@ -119,28 +123,30 @@ h2{
     background-color: var(--background-mask);   
 }
 /* == Progect ================================================*/
+
 .project__nav{
     display:flex;
     flex-wrap: wrap;
+
     background-color: var(--background-box);
     border: var(--border-box);
     padding: 20px;
     border-radius: var(--border-radius);
-    overflow: hidden;
+
     
 }
 .small__project__box{
     position: relative;
-    width: 260px;
-    height: 260px;
-    margin: 20px;
+    width: var(--small__project__box__size);
+    height: var(--small__project__box__size);
+    margin: var(--margin__default);
     border-radius: var(--border-radius);
     overflow: hidden;
 }
 .box__image{
     position: relative;
-    width: 260px;
-    height: 230px;
+    width: var(--small__project__box__size);
+    height: var(--small__project__box__size__img__heigth);
     transition: margin var(--animation-second) linear;
 }
 .img{
@@ -253,8 +259,27 @@ opacity: 0;
     
 }
 /* == Footer ================================================*/
+
+@media (max-width:1280px) {
+    .container{
+        position: relative;
+        width : 100%;
+        max-width: 940px;
+        min-width: 360px ;
+        margin: 0 auto;
+    }
+}
+@media (max-width:767px) {
+    .container{
+        position: relative;
+        width : 600px;
+        max-width: 600px;
+        min-width: 100%;
+        margin: 0 auto;
+    }
+
+}
 .footer{
-   
 
 }
 .footer__text{
